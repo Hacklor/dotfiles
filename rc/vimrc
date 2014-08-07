@@ -31,34 +31,23 @@ Bundle 'vim-scripts/tir_black'
 " Syntax & Language Support
 Bundle 'hail2u/vim-css3-syntax'
 Bundle 'kchmck/vim-coffee-script'
-Bundle 'nono/vim-handlebars'
 Bundle 'othree/html5-syntax.vim'
 Bundle 'slim-template/vim-slim'
 Bundle 'tpope/vim-markdown'
 Bundle 'tpope/vim-cucumber'
 Bundle 'vim-ruby/vim-ruby'
-Bundle 'vim-scripts/VimClojure'
 
 " Other
 Bundle 'csexton/trailertrash.vim'
 Bundle 'edsono/vim-matchit'
 Bundle 'godlygeek/tabular'
-Bundle 'kana/vim-textobj-user'
 Bundle 'kien/ctrlp.vim'
 Bundle 'mileszs/ack.vim'
-Bundle 'nelstrom/vim-textobj-rubyblock'
-Bundle 'nelstrom/vim-visual-star-search'
-Bundle 'nelstrom/vim-americanize'
 Bundle 'tomtom/tcomment_vim'
-Bundle 'tpope/vim-abolish'
 Bundle 'tpope/vim-bundler'
 Bundle 'tpope/vim-rails'
 Bundle 'tpope/vim-sensible'
 Bundle 'tpope/vim-surround'
-Bundle 'tpope/vim-unimpaired'
-Bundle 'vim-scripts/bufexplorer.zip'
-Bundle 'vim-scripts/netrw.vim'
-Bundle 'michaeljsmith/vim-indent-object'
 Bundle 'thoughtbot/vim-rspec'
 
 Bundle 'Lokaltog/vim-powerline'
@@ -128,17 +117,9 @@ set hlsearch
 let ruby_no_expensive = 1 " Differentiate between do..end and class..end is slow
 let ruby_operators = 1    " Highlight Ruby operators
 
-let g:netrw_list_hide  = "\.git,\.DS_Store"
-let g:netrw_banner     = 0
-let g:netrw_localrmdir='rm -r'
-
 let g:Powerline_symbols = 'fancy' " Use fancy symbols in vim-powerline
 
 set formatprg=par\ -w80\ -q
-
-if exists(':Americanize')
-  :Americanize
-endif
 
 
 " ==========================
@@ -169,10 +150,6 @@ nmap <F1> :set paste<cr>:r !pbpaste<cr>:set nopaste<cr>
 imap <F1> <Esc>:set paste<cr>:r !pbpaste<cr>:set nopaste<cr>
 nmap <F2> :.w !pbcopy<cr><cr>
 vmap <F2> :w !pbcopy<cr><cr>
-
-" in insert mode, jj goes to normal mode
-" if you ever need to type jj for real, type it slowly, like on old school mobile phones
-inoremap jj <ESC>
 
 " Directly switch between open splitted windows
 map <C-J> <C-W>j
@@ -269,10 +246,6 @@ map <Leader><Leader>u :Git up<cr>
 
 " Open notes file
 map <Leader>q :split ~/Dropbox/notes.md<cr>
-
-" Move line up or down
-" map <Leader>j :m .+1<CR>==
-" map <Leader>k :m .-2<CR>==
 
 " Moving lines up and down in normal, insert and visual mode
 nnoremap ∆ :m .+1<CR>==
