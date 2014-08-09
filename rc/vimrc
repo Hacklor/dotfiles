@@ -36,6 +36,7 @@ Bundle 'slim-template/vim-slim'
 Bundle 'tpope/vim-markdown'
 Bundle 'tpope/vim-cucumber'
 Bundle 'vim-ruby/vim-ruby'
+Bundle 'fatih/vim-go'
 
 " Other
 Bundle 'csexton/trailertrash.vim'
