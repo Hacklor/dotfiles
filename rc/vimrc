@@ -49,6 +49,7 @@ Bundle 'tpope/vim-rails'
 Bundle 'tpope/vim-sensible'
 Bundle 'tpope/vim-surround'
 Bundle 'thoughtbot/vim-rspec'
+Bundle 'fatih/vim-go'
 
 Bundle 'Lokaltog/vim-powerline'
 
