@@ -36,6 +36,7 @@ Bundle 'slim-template/vim-slim'
 Bundle 'tpope/vim-markdown'
 Bundle 'tpope/vim-cucumber'
 Bundle 'vim-ruby/vim-ruby'
+Bundle 'fatih/vim-go'
 
 " Other
 Bundle 'csexton/trailertrash.vim'
@@ -49,9 +50,10 @@ Bundle 'tpope/vim-rails'
 Bundle 'tpope/vim-sensible'
 Bundle 'tpope/vim-surround'
 Bundle 'thoughtbot/vim-rspec'
-Bundle 'fatih/vim-go'
+Bundle 'SirVer/ultisnips'
 
 Bundle 'Lokaltog/vim-powerline'
+Bundle 'mustache/vim-mustache-handlebars'
 
 if needsToInstallBundles == 1
   echo "\nInstalling Bundles, please ignore key map error messages\n"
@@ -125,7 +127,7 @@ let g:netrw_localrmdir='rm -r'
 
 let g:Powerline_symbols = 'fancy' " Use fancy symbols in vim-powerline
 
-set formatprg=par\ -w80\ -q
+" set formatprg=par\ -w80\ -q
 
 
 " ==========================
@@ -251,7 +253,9 @@ map <Leader><Leader>f :Git fetch<cr>
 map <Leader><Leader>u :Git up<cr>
 
 " Open notes file
-map <Leader>q :split ~/Dropbox/notes.md<cr>
+map <Leader>1 :split ~/Dropbox/notes1.md<cr>
+map <Leader>2 :split ~/Dropbox/notes2.md<cr>
+map <Leader>3 :split ~/Dropbox/notes3.md<cr>
 
 " Moving lines up and down in normal, insert and visual mode
 nnoremap ∆ :m .+1<CR>==

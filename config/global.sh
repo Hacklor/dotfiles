@@ -10,7 +10,7 @@ export BUNDLER_EDITOR=$EDITOR
 export GEMEDITOR=$EDITOR
 
 # Ruby Optimalizations
-export RUBY_HEAP_MIN_SLOTS=1100000
+export RUBY_GC_HEAP_INIT_SLOTS=1100000
 export RUBY_GC_MALLOC_LIMIT=110000000
 export RUBY_HEAP_FREE_MIN=20000
 export RUBY_HEAP_SLOTS_GROWTH_FACTOR=1
@@ -50,31 +50,35 @@ alias irb='pry'
 alias guard='bundle exec guard'
 
 # Git aliases
-alias cdb='base=$(git rev-parse --show-cdup) && cd $base'
-alias st='git status'
-alias status='git status'
-alias co='git checkout'
-alias checkout='git checkout'
-alias ci='git commit'
-alias commit='git commit'
-alias amend='git commit --amend'
-alias cm='git commit --message'
-alias up='git up'
-alias upstash='git stash && git pull --ff-only && git stash pop'
-alias br='git branch'
-alias branch='git branch'
-alias lg='git log -p'
-alias ll='git l'
-alias la='git la'
-alias aa='git add --all && git status -sb'
-alias d='git diff'
-alias df='git diff'
-alias dc='git diff --cached'
-alias f='git fetch'
-alias fetch='git fetch'
-alias gf='git fetch && git status'
-alias push='git push'
+# alias cdb='base=$(git rev-parse --show-cdup) && cd $base'
+# alias st='git status'
+# alias status='git status'
+# alias co='git checkout'
+# alias checkout='git checkout'
+# alias ci='git commit'
+# alias commit='git commit'
+# alias amend='git commit --amend'
+# alias cm='git commit --message'
+# alias up='git up'
+# alias upstash='git stash && git pull --ff-only && git stash pop'
+# alias br='git branch'
+# alias branch='git branch'
+# alias lg='git log -p'
+# alias ll='git l'
+# alias aa='git add --all && git status -sb'
+# alias d='git diff'
+# alias df='git diff'
+# alias dc='git diff --cached'
+# alias f='git fetch'
+# alias fetch='git fetch'
+# alias gf='git fetch && git status'
+# alias push='git push'
 
+alias rspec='rspec --colour'
+
+alias gst='git status'
+alias gca='git commit -av'
+alias gaa='git add --all'
 
 function r() {
   if [ -f "./script/rails" ]; then
