@@ -36,7 +36,6 @@ Bundle 'slim-template/vim-slim'
 Bundle 'tpope/vim-markdown'
 Bundle 'tpope/vim-cucumber'
 Bundle 'vim-ruby/vim-ruby'
-Bundle 'fatih/vim-go'
 
 " Other
 Bundle 'csexton/trailertrash.vim'
@@ -102,7 +101,7 @@ set undodir=~/.vim/undo    " Where to store undo history
 set timeoutlen=500         " Don't wait so long for ambiguous leader keys
 set noesckeys              " Get rid of the delay when hitting esc!
 set gdefault               " assume the /g flag on :s substitutions to replace all matches in a line
-set textwidth=80           " Set textwidth
+set textwidth=100          " Set textwidth
 set colorcolumn=+1         " Set the column after the textwidth as colored
 
 " Indenting always 2 spaces, sorry Python

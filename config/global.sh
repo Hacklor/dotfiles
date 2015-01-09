@@ -29,56 +29,28 @@ export PATH="/usr/local/share/npm/bin:$PATH"
 export NODE_PATH="/usr/local/lib/node_modules"
 
 # General aliases
-alias l='ls -halo'
-alias ltr='ls -lt'
-alias lth='l -t|head'
-alias lh='ls -Shl | less'
-alias tf='tail -f -n 100'
-alias less='less -R' # color codes in less
-alias m='mvim --remote-silent' # open file in existing mvim
+alias la='ls -al'
 alias grep='grep --colour=always'
 
 # Ruby aliases
 alias rdm='rake db:migrate db:test:prepare'
-alias rr='mkdir -p tmp && touch tmp/restart.txt'
 alias c='bundle exec cucumber -r features'
 alias wip='c --profile wip'
-alias specdoc='time rspec -fd'
-alias s='rspec --require ~/.dotfiles/script/rspec_focus --order default --color --tty'
 alias be='bundle exec'
 alias irb='pry'
 alias guard='bundle exec guard'
-
-# Git aliases
-# alias cdb='base=$(git rev-parse --show-cdup) && cd $base'
-# alias st='git status'
-# alias status='git status'
-# alias co='git checkout'
-# alias checkout='git checkout'
-# alias ci='git commit'
-# alias commit='git commit'
-# alias amend='git commit --amend'
-# alias cm='git commit --message'
-# alias up='git up'
-# alias upstash='git stash && git pull --ff-only && git stash pop'
-# alias br='git branch'
-# alias branch='git branch'
-# alias lg='git log -p'
-# alias ll='git l'
-# alias aa='git add --all && git status -sb'
-# alias d='git diff'
-# alias df='git diff'
-# alias dc='git diff --cached'
-# alias f='git fetch'
-# alias fetch='git fetch'
-# alias gf='git fetch && git status'
-# alias push='git push'
-
 alias rspec='rspec --colour'
 
+# Git aliases
 alias gst='git status'
 alias gca='git commit -av'
 alias gaa='git add --all'
+alias gd='git diff'
+alias gdc='git diff --cached'
+alias grh='git reset --hard'
+alias gb='git branch'
+alias gbD='git branch -D'
+alias gp='git push'
 
 function r() {
   if [ -f "./script/rails" ]; then
