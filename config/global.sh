@@ -2,7 +2,7 @@ export LC_CTYPE=en_US.UTF-8
 export LC_ALL=en_US.UTF-8
 
 # Setting the editor of choice
-export EDITOR='mvim'
+export EDITOR='vim'
 export GIT_EDITOR='vim'
 export VISUAL=$EDITOR
 export SVN_EDITOR=$EDITOR
@@ -29,8 +29,13 @@ export PATH="/usr/local/share/npm/bin:$PATH"
 export NODE_PATH="/usr/local/lib/node_modules"
 
 # General aliases
+alias fucking='sudo'
 alias la='ls -al'
 alias grep='grep --colour=always'
+
+# Moving to directories
+alias projects='cd ~/Projects'
+alias dotfiles='cd ~/.dotfiles'
 
 # Ruby aliases
 alias rdm='rake db:migrate db:test:prepare'
@@ -42,6 +47,7 @@ alias guard='bundle exec guard'
 alias rspec='rspec --colour'
 
 # Git aliases
+alias groot='cd $(git rev-parse --show-toplevel)' # Go to the root directory of the git project
 alias gst='git status'
 alias gca='git commit -av'
 alias gaa='git add --all'
