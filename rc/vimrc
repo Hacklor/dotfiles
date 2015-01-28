@@ -35,6 +35,7 @@ Bundle 'othree/html5-syntax.vim'
 Bundle 'slim-template/vim-slim'
 Bundle 'tpope/vim-markdown'
 Bundle 'tpope/vim-cucumber'
+Bundle 'tpope/vim-haml'
 Bundle 'vim-ruby/vim-ruby'
 
 " Other
@@ -141,6 +142,7 @@ autocmd BufReadPost *
 
 " Format xml files
 au FileType xml exe ":silent 1,$!xmllint --format --recover - 2>/dev/null"
+au BufRead,BufNewFile *.hamlc set ft=haml
 
 
 
