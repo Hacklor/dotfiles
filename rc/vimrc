@@ -87,7 +87,7 @@ set vb t_vb=               " Turn off beep
 set lazyredraw             " Don't redraw during macro execution
 set synmaxcol=2048         " Stop syntax highlighting for long lines
 set relativenumber         " Relative line numbering
-" set number               " Absolute line numbering
+set number                 " Absolute line number on the current line
 set nowrap                 " No wrapping by default
 set scrolloff=4            " Keep a few lines above and below current line
 set equalalways            " create equally sized splits
@@ -120,10 +120,12 @@ set hlsearch
 let ruby_no_expensive = 1 " Differentiate between do..end and class..end is slow
 let ruby_operators = 1    " Highlight Ruby operators
 
-" Remove NetRW banner and hide some files
-let g:netrw_list_hide  = "\.git,\.DS_Store"
+" Hide DS_store, .git and current and previous directory indicators
+" " Use - to go up one dir
+let g:netrw_list_hide= "\.DS_Store,\.git/,^\\\./,^\\\.\\\./"
 let g:netrw_banner     = 0
 let g:netrw_localrmdir='rm -r'
+let g:netrw_bufsettings = 'noma nomod nu nobl nowrap ro'
 
 let g:Powerline_symbols = 'fancy' " Use fancy symbols in vim-powerline
 
@@ -151,8 +153,8 @@ au BufRead,BufNewFile *.hamlc set ft=haml
 " GENERAL KEY MAPPINGS
 " ==========================
 
-" Rename :W to :w
-command! W :w
+command! W :w         " Rename :W to :w
+command! Q :q         " Rename :Q to :q
 
 " Use OSX pbpaste/pbcopy for F1/F2, for use in terminal
 nmap <F1> :set paste<cr>:r !pbpaste<cr>:set nopaste<cr>
