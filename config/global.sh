@@ -57,6 +57,10 @@ alias grh='git reset --hard'
 alias gb='git branch'
 alias gbD='git branch -D'
 alias gp='git push'
+alias gba='git branch -a'
+
+# Mvn aliases
+alias mci='mvn clean install'
 
 function r() {
   if [ -f "./script/rails" ]; then
