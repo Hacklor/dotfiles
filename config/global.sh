@@ -58,6 +58,7 @@ alias gb='git branch'
 alias gbD='git branch -D'
 alias gp='git push'
 alias gba='git branch -a'
+alias grp='git remote prune'
 
 # Mvn aliases
 alias mci='mvn clean install'
