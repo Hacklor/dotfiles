@@ -57,6 +57,7 @@ alias grh='git reset --hard'
 alias gb='git branch'
 alias gbD='git branch -D'
 alias gp='git push'
+alias gf='git fetch'
 alias gba='git branch -a'
 alias grp='git remote prune'
 
