@@ -16,7 +16,7 @@ export RUBY_HEAP_FREE_MIN=20000
 export RUBY_HEAP_SLOTS_GROWTH_FACTOR=1
 
 # Paths
-export PATH="/usr/local/bin:$PATH"
+export PATH="/usr/local/bin:/opt/local/bin:$PATH"
 if [[ -d "$HOME/.rvm/bin" ]]; then
   export PATH=$PATH:$HOME/.rvm/bin
 fi
@@ -32,6 +32,7 @@ export NODE_PATH="/usr/local/lib/node_modules"
 alias fucking='sudo'
 alias la='ls -al'
 alias grep='grep --colour=always'
+alias reload='source ~/.dotfiles/config/global.sh'
 
 # Moving to directories
 alias projects='cd ~/Projects'
@@ -51,15 +52,18 @@ alias groot='cd $(git rev-parse --show-toplevel)' # Go to the root directory of 
 alias gst='git status'
 alias gca='git commit -av'
 alias gaa='git add --all'
+alias gap='git add -p'
 alias gd='git diff'
 alias gdc='git diff --cached'
 alias grh='git reset --hard'
 alias gb='git branch'
+alias gba='git branch -a'
 alias gbD='git branch -D'
 alias gp='git push'
+alias gpu='git push --set-upstream'
 alias gf='git fetch'
-alias gba='git branch -a'
 alias grp='git remote prune'
+alias gclean='git branch --merged | grep -v master | grep -v "^\*" | cut -d " " -f3 | xargs git branch -d'
 
 # Mvn aliases
 alias mci='mvn clean install'

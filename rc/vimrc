@@ -37,6 +37,7 @@ Bundle 'tpope/vim-markdown'
 Bundle 'tpope/vim-cucumber'
 Bundle 'tpope/vim-haml'
 Bundle 'vim-ruby/vim-ruby'
+Bundle 'raichoo/haskell-vim'
 
 " Other
 Bundle 'csexton/trailertrash.vim'
