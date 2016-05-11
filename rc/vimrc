@@ -156,8 +156,9 @@ au BufRead,BufNewFile *.hamlc set ft=haml
 " ==========================
 
 command! W :w           " Rename :W to :w
-command! Wq :wq         " Rename :Wq to :wq
+command! Wq :wq         " Rename :Wq to :w
 command! Q :q           " Rename :Q to :q
+command! WQ :wq         " Rename :WQ to :wq
 
 " Use OSX pbpaste/pbcopy for F1/F2, for use in terminal
 nmap <F1> :set paste<cr>:r !pbpaste<cr>:set nopaste<cr>
