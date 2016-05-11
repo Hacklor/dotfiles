@@ -38,6 +38,7 @@ Bundle 'tpope/vim-cucumber'
 Bundle 'tpope/vim-haml'
 Bundle 'vim-ruby/vim-ruby'
 Bundle 'raichoo/haskell-vim'
+Bundle 'mxw/vim-jsx'
 
 " Other
 Bundle 'csexton/trailertrash.vim'
