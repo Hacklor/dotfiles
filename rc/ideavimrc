@@ -1,0 +1,6 @@
+set noerrorbells            " Turn off error bells, unfortunately IDEA doesn't understand this
+set visualbell              " Will actually turn of the sound bell
+
+" Copied from vimrc
+set relativenumber          " Relative line numbering
+set number                  " Absolute line number on the current line
