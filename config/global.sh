@@ -28,6 +28,9 @@ export PATH=$PATH:$HOME/.dotfiles/bin
 export PATH="/usr/local/share/npm/bin:$PATH"
 export NODE_PATH="/usr/local/lib/node_modules"
 
+# Link to personal wiki
+alias wiki='cd ~/Dropbox/Wiki/'
+
 # General aliases
 alias fucking='sudo'
 alias la='ls -al'
