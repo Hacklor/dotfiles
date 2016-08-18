@@ -39,6 +39,7 @@ Bundle 'tpope/vim-haml'
 Bundle 'vim-ruby/vim-ruby'
 Bundle 'raichoo/haskell-vim'
 Bundle 'mxw/vim-jsx'
+Bundle 'elixir-lang/vim-elixir'
 
 " Other
 Bundle 'csexton/trailertrash.vim'
