@@ -39,7 +39,7 @@ alias reload='source ~/.dotfiles/config/global.sh'
 
 # Moving to directories
 alias projects='cd ~/Projects'
-alias dotfiles='cd ~/.dotfiles'
+alias dotfiles='vim ~/.dotfiles'
 
 # Ruby aliases
 alias rdm='rake db:migrate db:test:prepare'
