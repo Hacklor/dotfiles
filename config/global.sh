@@ -29,7 +29,7 @@ export PATH="/usr/local/share/npm/bin:$PATH"
 export NODE_PATH="/usr/local/lib/node_modules"
 
 # Link to personal wiki
-alias wiki='cd ~/Dropbox/Wiki/'
+alias wiki='vim ~/Dropbox/Wiki/'
 
 # General aliases
 alias fucking='sudo'
@@ -64,6 +64,8 @@ alias gba='git branch -a'
 alias gbD='git branch -D'
 alias gp='git push'
 alias gpu='git push --set-upstream'
+alias gs='git stash'
+alias gsp='git stash pop'
 alias gf='git fetch'
 alias grp='git remote prune'
 alias gclean='git branch --merged | grep -v master | grep -v "^\*" | cut -d " " -f3 | xargs git branch -d'
