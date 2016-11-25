@@ -73,6 +73,11 @@ alias gclean='git branch --merged | grep -v master | grep -v "^\*" | cut -d " " 
 # Mvn aliases
 alias mci='mvn clean install'
 
+# Automatically add all ssh keys to ssh agent
+function sshkeys() {
+  find ~/.ssh/keys -not -name '*.pub' -type f | xargs ssh-add
+}
+
 function r() {
   if [ -f "./script/rails" ]; then
     ./script/rails $*
