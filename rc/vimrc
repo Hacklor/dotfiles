@@ -137,7 +137,10 @@ let g:Powerline_symbols = 'fancy' " Use fancy symbols in vim-powerline
 
 
 " Rust formatting on save
-let g:rustfmt_autosave = 1
+" let g:rustfmt_autosave = 1
+
+" Issue in rust-vim: https://github.com/rust-lang/rust.vim/issues/113
+" let g:syntastic_quiet_messages = {"regex": 'is unstable and should only be used on the nightly compiler, but it is currently accepted for backwards compatibility; this will soon change, see issue #31847 for more details'}
 
 " ==========================
 " AUTOCOMMANDS
