@@ -40,6 +40,7 @@ Bundle 'vim-ruby/vim-ruby'
 Bundle 'raichoo/haskell-vim'
 Bundle 'mxw/vim-jsx'
 Bundle 'elixir-lang/vim-elixir'
+Bundle 'rust-lang/rust.vim'
 
 " Other
 Bundle 'csexton/trailertrash.vim'
@@ -134,6 +135,9 @@ let g:Powerline_symbols = 'fancy' " Use fancy symbols in vim-powerline
 
 " set formatprg=par\ -w80\ -q
 
+
+" Rust formatting on save
+let g:rustfmt_autosave = 1
 
 " ==========================
 " AUTOCOMMANDS
