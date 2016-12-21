@@ -57,6 +57,7 @@
 	required = true
 [user]
 	name = Nicole Bekkers
+	signingkey = A5879C3C279DEC11
 [difftool "sourcetree"]
 	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
 	path = 
