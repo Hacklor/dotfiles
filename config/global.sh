@@ -2,8 +2,8 @@ export LC_CTYPE=en_US.UTF-8
 export LC_ALL=en_US.UTF-8
 
 # Setting the editor of choice
-export EDITOR='vim'
-export GIT_EDITOR='vim'
+export EDITOR='nvim'
+export GIT_EDITOR='nvim'
 export VISUAL=$EDITOR
 export SVN_EDITOR=$EDITOR
 export BUNDLER_EDITOR=$EDITOR
@@ -28,8 +28,11 @@ export PATH=$PATH:$HOME/.dotfiles/bin
 export PATH="/usr/local/share/npm/bin:$PATH"
 export NODE_PATH="/usr/local/lib/node_modules"
 
+# Use nvim instead of vim, even when I accidently type vim
+alias vim='nvim'
+
 # Link to personal wiki
-alias wiki='vim ~/Dropbox/Wiki/'
+alias wiki='nvim ~/Dropbox/Wiki/'
 
 # General aliases
 alias fucking='sudo'
@@ -38,10 +41,12 @@ alias grep='grep --colour=always'
 alias reload='source ~/.dotfiles/config/global.sh'
 
 # Moving to directories
+alias p='cd ~/Projects'
 alias projects='cd ~/Projects'
-alias dotfiles='vim ~/.dotfiles'
+alias dot='nvim ~/.dotfiles'
+alias dotfiles='cd ~/.dotfiles'
 
-# Ruby aliases
+# Ruby
 alias rdm='rake db:migrate db:test:prepare'
 alias c='bundle exec cucumber -r features'
 alias wip='c --profile wip'
@@ -50,8 +55,9 @@ alias irb='pry'
 alias guard='bundle exec guard'
 alias rspec='rspec --colour'
 
-# Git aliases
+# Git
 alias groot='cd $(git rev-parse --show-toplevel)' # Go to the root directory of the git project
+alias gclean='git branch --merged | grep -v master | grep -v "^\*" | cut -d " " -f3 | xargs git branch -d'
 alias gst='git status'
 alias gca='git commit -av'
 alias gaa='git add --all'
@@ -68,10 +74,15 @@ alias gs='git stash'
 alias gsp='git stash pop'
 alias gf='git fetch'
 alias grp='git remote prune'
-alias gclean='git branch --merged | grep -v master | grep -v "^\*" | cut -d " " -f3 | xargs git branch -d'
 
-# Mvn aliases
+# Mvn
 alias mci='mvn clean install'
+
+# GoLang
+alias got='export GOPATH=`pwd`;export GO_CONFIG=$GOPATH/config/test.conf; go test'
+
+# Gulp
+alias gw='gulp watch'
 
 # Automatically add all ssh keys to ssh agent
 function sshkeys() {
@@ -85,6 +96,7 @@ function r() {
     ./bin/rails $*
   fi
 }
+
 # checks to see if bundler is installed, if it isn't it will install it
 # checks to see if your bundle is complete, runs bundle install if it isn't
 # if any arguments have been passed it will run it with bundle exec
@@ -110,11 +122,6 @@ function github-init () {
 
 function github-url () {
   git config remote.origin.url | sed -En 's/git(@|:\/\/)github.com(:|\/)(.+)\/(.+).git/https:\/\/github.com\/\3\/\4/p'
-}
-
-# Seems to be the best OS X jump-to-github alias from http://tinyurl.com/2mtncf
-function github-go () {
-  open $(github-url)
 }
 
 # grep for a process

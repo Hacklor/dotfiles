@@ -29,18 +29,33 @@ Bundle 'wgibbs/vim-irblack'
 Bundle 'vim-scripts/tir_black'
 
 " Syntax & Language Support
+Bundle 'othree/html5-syntax.vim'
 Bundle 'hail2u/vim-css3-syntax'
 Bundle 'kchmck/vim-coffee-script'
-Bundle 'othree/html5-syntax.vim'
-Bundle 'slim-template/vim-slim'
-Bundle 'tpope/vim-markdown'
+
+" Ruby / Rails
+Bundle 'vim-ruby/vim-ruby'
+Bundle 'tpope/vim-rails'
 Bundle 'tpope/vim-cucumber'
 Bundle 'tpope/vim-haml'
-Bundle 'vim-ruby/vim-ruby'
+Bundle 'slim-template/vim-slim'
+
+" Haskell
 Bundle 'raichoo/haskell-vim'
-Bundle 'mxw/vim-jsx'
+
+" Elixir
 Bundle 'elixir-lang/vim-elixir'
+
+" Rust-lang
 Bundle 'rust-lang/rust.vim'
+
+" Javascript
+Bundle 'vim-javascript'
+Bundle 'mxw/vim-jsx'
+Bundle 'isRuslan/vim-es6'
+
+" Other syntax
+Bundle 'tpope/vim-markdown'
 
 " Other
 Bundle 'csexton/trailertrash.vim'
@@ -50,7 +65,6 @@ Bundle 'kien/ctrlp.vim'
 Bundle 'mileszs/ack.vim'
 Bundle 'tomtom/tcomment_vim'
 Bundle 'tpope/vim-bundler'
-Bundle 'tpope/vim-rails'
 Bundle 'tpope/vim-sensible'
 Bundle 'tpope/vim-surround'
 Bundle 'thoughtbot/vim-rspec'
@@ -223,6 +237,9 @@ map <leader>e :edit %%
 map <leader>v :view %%
 map <leader>m :vsplit %%
 map <leader>n :split %%
+
+" Map ,j to format json
+map <Leader>j :%!python -m json.tool<cr>
 
 let g:rspec_command_launcher = "iterm"
 let g:rspec_command_executable = "run_test {spec}"
