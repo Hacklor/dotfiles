@@ -77,8 +77,10 @@ endif
 
 filetype plugin indent on
 
-
-
+" =========================
+" NEOVIM
+" =========================
+let g:python3_host_prog = '/usr/local/bin/python3' " Let NeoVim make use of Python 3 (instead of Python 2)
 
 " ==========================
 " SETTINGS
@@ -114,10 +116,19 @@ set directory=~/.vim/swap/ " Keep swap files in a central location
 set undofile               " Keep undo history even after closing Vim
 set undodir=~/.vim/undo    " Where to store undo history
 set timeoutlen=500         " Don't wait so long for ambiguous leader keys
-set noesckeys              " Get rid of the delay when hitting esc!
 set gdefault               " assume the /g flag on :s substitutions to replace all matches in a line
 set textwidth=100          " Set textwidth
 set colorcolumn=+1         " Set the column after the textwidth as colored
+
+" Vi / Vim only settings
+if !has('nvim')
+  " The noesckeys option has been removed in NeoVim, so it's only applicable in Vim
+  set noesckeys              " Get rid of the delay when hitting esc!
+endif
+
+" NeoVim only settings
+if has('nvim')
+endif
 
 " Indenting always 2 spaces, sorry Python
 set cindent
