@@ -22,4 +22,8 @@ for f in $mydir/rc/*; do
 
 done
 
+# Symlink NeoVim init
+echo "Symlink NeoVim ~/.config/nvim/init.vim to ~/.dotfiles/rc/init.vim"
+ln -fs $mydir/rc/init.vim ~/.config/nvim/init.vim
+
 echo "Done."
