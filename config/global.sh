@@ -51,9 +51,13 @@ alias rdm='rake db:migrate db:test:prepare'
 alias c='bundle exec cucumber -r features'
 alias wip='c --profile wip'
 alias be='bundle exec'
+alias bi='bundle install'
 alias irb='pry'
 alias guard='bundle exec guard'
 alias rspec='rspec --colour'
+alias rc='rubocop'
+alias rca='rubocop -a'
+alias fms='foreman start'
 
 # Git
 alias groot='cd $(git rev-parse --show-toplevel)' # Go to the root directory of the git project
@@ -83,6 +87,10 @@ alias got='export GOPATH=`pwd`;export GO_CONFIG=$GOPATH/config/test.conf; go tes
 
 # Gulp
 alias gw='gulp watch'
+
+# Yarn
+alias yt='yarn test'
+alias ytw='yarn test --watch'
 
 # Automatically add all ssh keys to ssh agent
 function sshkeys() {

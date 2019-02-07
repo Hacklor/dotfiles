@@ -23,6 +23,8 @@ call vundle#rc()
 Bundle 'gmarik/vundle'
 Bundle 'Syntastic'
 Bundle 'tpope/vim-fugitive'
+Bundle 'kien/ctrlp.vim'
+Bundle 'mileszs/ack.vim'
 
 " Colorschemes
 Bundle 'wgibbs/vim-irblack'
@@ -40,38 +42,32 @@ Bundle 'tpope/vim-cucumber'
 Bundle 'tpope/vim-haml'
 Bundle 'slim-template/vim-slim'
 
-" Haskell
-Bundle 'raichoo/haskell-vim'
-
 " Elixir
 Bundle 'elixir-lang/vim-elixir'
 
-" Rust-lang
-Bundle 'rust-lang/rust.vim'
+" Haskell
+Bundle "neovimhaskell/haskell-vim"
 
 " Javascript
-Bundle 'vim-javascript'
+" Bundle 'vim-javascript'
+" Bundle 'isRuslan/vim-es6'
 Bundle 'mxw/vim-jsx'
-Bundle 'isRuslan/vim-es6'
 
 " Other syntax
-Bundle 'tpope/vim-markdown'
+" Bundle 'tpope/vim-markdown'
 
 " Other
 Bundle 'csexton/trailertrash.vim'
-Bundle 'edsono/vim-matchit'
-Bundle 'godlygeek/tabular'
-Bundle 'kien/ctrlp.vim'
-Bundle 'mileszs/ack.vim'
-Bundle 'tomtom/tcomment_vim'
-Bundle 'tpope/vim-bundler'
-Bundle 'tpope/vim-sensible'
+" Bundle 'edsono/vim-matchit'
+" Bundle 'godlygeek/tabular'
+" Bundle 'tomtom/tcomment_vim'
+" Bundle 'tpope/vim-bundler'
+" Bundle 'tpope/vim-sensible'
 Bundle 'tpope/vim-surround'
-Bundle 'thoughtbot/vim-rspec'
-Bundle 'SirVer/ultisnips'
-
+" Bundle 'thoughtbot/vim-rspec'
+" Bundle 'SirVer/ultisnips'
+"
 Bundle 'Lokaltog/vim-powerline'
-Bundle 'mustache/vim-mustache-handlebars'
 
 if needsToInstallBundles == 1
   echo "\nInstalling Bundles, please ignore key map error messages\n"
@@ -182,6 +178,8 @@ command! Wq :wq         " Rename :Wq to :w
 command! Q :q           " Rename :Q to :q
 command! WQ :wq         " Rename :WQ to :wq
 
+" command! Ex :Explore    " Rename :Ex to :Explore
+
 " Use OSX pbpaste/pbcopy for F1/F2, for use in terminal
 nmap <F1> :set paste<cr>:r !pbpaste<cr>:set nopaste<cr>
 imap <F1> <Esc>:set paste<cr>:r !pbpaste<cr>:set nopaste<cr>
@@ -244,6 +242,13 @@ map <Leader>j :%!python -m json.tool<cr>
 let g:rspec_command_launcher = "iterm"
 let g:rspec_command_executable = "run_test {spec}"
 
+" Ack in Vim
+cnoreabbrev Ack Ack!
+nnoremap <Leader>a :Ack!<Space>
+
+" .js files are handled as .jsx
+let g:jsx_ext_required = 0
+
 " Rspec.vim mappings
 map <Leader>t :call RunCurrentSpecFile()<cr>
 map <Leader>T :call RunNearestSpec()<cr>
@@ -297,7 +302,8 @@ inoremap ˚ <Esc>:m .-2<CR>==gi
 vnoremap ∆ :m '>+1<CR>gv=gv
 vnoremap ˚ :m '<-2<CR>gv=gv
 
-
+" Configuration for CtrlP file finder
+let g:ctrlp_custom_ignore = 'node_modules\|DS_Store\|git|tmp'
 
 " ==========================
 " FUNCTIONS

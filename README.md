@@ -42,7 +42,7 @@ I use rbenv and ruby-build for installing Ruby:
 
 To install the dotfiles:
 
-    git clone https://github.com/iain/dotfiles.git ~/.dotfiles
+    git clone https://github.com/hacklor/dotfiles.git ~/.dotfiles
     cd ~/.dotfiles
     ./script/install
 
