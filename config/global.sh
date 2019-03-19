@@ -15,6 +15,7 @@ export RUBY_GC_MALLOC_LIMIT=110000000
 export RUBY_HEAP_FREE_MIN=20000
 export RUBY_HEAP_SLOTS_GROWTH_FACTOR=1
 
+
 # Paths
 export PATH="/usr/local/bin:/opt/local/bin:$PATH"
 if [[ -d "$HOME/.rvm/bin" ]]; then
@@ -26,7 +27,12 @@ fi
 export PATH=$PATH:$HOME/.dotfiles/bin
 # Load Node.js bin:
 export PATH="/usr/local/share/npm/bin:$PATH"
-export NODE_PATH="/usr/local/lib/node_modules"
+# export NODE_PATH="/usr/local/lib/node_modules"
+
+# NVM
+export NVM_DIR="$HOME/.nvm"
+[ -s "/usr/local/opt/nvm/nvm.sh" ] && . "/usr/local/opt/nvm/nvm.sh"  # This loads nvm
+[ -s "/usr/local/opt/nvm/etc/bash_completion" ] && . "/usr/local/opt/nvm/etc/bash_completion"  # This loads nvm bash_completion
 
 # Use nvim instead of vim, even when I accidently type vim
 alias vim='nvim'
@@ -36,7 +42,7 @@ alias wiki='nvim ~/Dropbox/Wiki/'
 
 # General aliases
 alias fucking='sudo'
-alias la='ls -al'
+alias la='ls -alh'
 alias grep='grep --colour=always'
 alias reload='source ~/.dotfiles/config/global.sh'
 
@@ -89,8 +95,14 @@ alias got='export GOPATH=`pwd`;export GO_CONFIG=$GOPATH/config/test.conf; go tes
 alias gw='gulp watch'
 
 # Yarn
+alias yb='yarn build'
+alias ysa="yarn start:all"
+
 alias yt='yarn test'
 alias ytw='yarn test --watch'
+
+alias yl='yarn lint'
+alias ysf='yarn standard --fix'
 
 # Automatically add all ssh keys to ssh agent
 function sshkeys() {

@@ -1,6 +1,6 @@
 # .dotfiles
 
-This repository contains my Bash, ZSH, and Vim settings.
+This repository contains my Bash, ZSH, and NeoVim settings.
 
 Some of the features include:
 
@@ -27,16 +27,7 @@ Only use this if you know what you are doing.
 
 Here's what I install on a clean OSX:
 
-    brew install ack imagemagick par readline wget \
-      libyaml mysql zsh node sqlite memcached \
-      postgresql tree openssl
-
-Make sure to read the caveats of those packages to make them start up
-automatically when that makes sense.
-
-I use rbenv and ruby-build for installing Ruby:
-
-    brew install rbenv ruby-build
+    brew install ack wget zsh readline
 
 ### dotfiles
 
@@ -72,9 +63,27 @@ folder or URL`. Fill in the text field to point to
 `/Users/your_name/.dotfiles/iterm2`. You might need to restart iTerm2 after
 that.
 
-### Vim
+### NeoVim
+Many plugins need python support in order to work.
 
-Vim will automatically install itself when you start Vim for the first time.
+```bash
+brew install python3
+pip3 install neovim --upgrade
+```
+
+To make sure that NeoVim uses the correct version of Python, the following line is added to vimrc
+
+```bash
+let g:python3_host_prog = '/usr/local/bin/python3'
+```
+
+```bash
+brew install neovim
+```
+
+### Vim Plugins
+
+Vim Plugins will automatically install themselves when you start Vim for the first time.
 
 Delete (or move) your `~/.vim` directory to let it install.
 

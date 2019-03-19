@@ -41,6 +41,7 @@ Bundle 'tpope/vim-rails'
 Bundle 'tpope/vim-cucumber'
 Bundle 'tpope/vim-haml'
 Bundle 'slim-template/vim-slim'
+" Bundle 'thoughtbot/vim-rspec'
 
 " Elixir
 Bundle 'elixir-lang/vim-elixir'
@@ -49,9 +50,12 @@ Bundle 'elixir-lang/vim-elixir'
 Bundle "neovimhaskell/haskell-vim"
 
 " Javascript
-" Bundle 'vim-javascript'
 " Bundle 'isRuslan/vim-es6'
+" Bundle 'vim-javascript'
 Bundle 'mxw/vim-jsx'
+Bundle 'othree/yajs.vim'
+Bundle 'othree/javascript-libraries-syntax.vim'
+Bundle 'othree/es.next.syntax.vim'
 
 " Other syntax
 " Bundle 'tpope/vim-markdown'
@@ -64,7 +68,6 @@ Bundle 'csexton/trailertrash.vim'
 " Bundle 'tpope/vim-bundler'
 " Bundle 'tpope/vim-sensible'
 Bundle 'tpope/vim-surround'
-" Bundle 'thoughtbot/vim-rspec'
 " Bundle 'SirVer/ultisnips'
 "
 Bundle 'Lokaltog/vim-powerline'
@@ -119,6 +122,7 @@ set timeoutlen=500         " Don't wait so long for ambiguous leader keys
 set gdefault               " assume the /g flag on :s substitutions to replace all matches in a line
 set textwidth=100          " Set textwidth
 set colorcolumn=+1         " Set the column after the textwidth as colored
+set autoread               " Automatically reload files changed outside of vim
 
 " Vi / Vim only settings
 if !has('nvim')
@@ -314,7 +318,9 @@ vnoremap ∆ :m '>+1<CR>gv=gv
 vnoremap ˚ :m '<-2<CR>gv=gv
 
 " Configuration for CtrlP file finder
-let g:ctrlp_custom_ignore = 'node_modules\|DS_Store\|git|tmp'
+let g:ctrlp_working_path_mode = 'd'
+let g:ctrlp_custom_ignore = '\v[\/](node_modules|target|dist|tmp|es|lib)|(\.(swp|ico|git|svn|DS_Store))$'
+" let g:ctrlp_custom_ignore = 'node_modules\|DS_Store\|git|tmp|es6|lib'
 
 " ==========================
 " FUNCTIONS
