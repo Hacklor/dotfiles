@@ -15,6 +15,16 @@ Some of the features include:
 There is absolutely NO guarantee for this project to work on your machine.
 Only use this if you know what you are doing.
 
+## Increase Key Repeat
+I like to increase the key repeat beyond what Mac OS X provides in the Preferences. I do this with the following commands:
+
+``` bash
+defaults write -g InitialKeyRepeat -int 10 # normal minimum is 15 (225 ms)
+defaults write -g KeyRepeat -int 1 # normal minimum is 2 (30 ms)
+```
+
+It requires a restart / logout-login in order to work
+
 ## Installation
 
 ### Prerequisites
@@ -31,8 +41,10 @@ Ubuntu should pretty much be ready to go. Just make sure you have a decent Termi
 
 Here's what I install on a clean OSX:
 
-    brew install ack wget zsh readline
-    
+```bash
+brew install ack wget zsh readline
+```
+
 ### Ubuntu Apt-get
 
 ```bash
@@ -45,9 +57,11 @@ sudo apt install libreadline7 libreadline-dev
 
 To install the dotfiles:
 
-    git clone https://github.com/hacklor/dotfiles.git ~/.dotfiles
-    cd ~/.dotfiles
-    ./script/install
+```bash
+git clone https://github.com/hacklor/dotfiles.git ~/.dotfiles
+cd ~/.dotfiles
+./script/install
+```
 
 This will create backups for anything you already have and add symlinks to
 these parts.
@@ -93,6 +107,12 @@ let g:python3_host_prog = '/usr/local/bin/python3'
 brew install neovim
 ```
 
+```bash
+# For Ubuntu, check which one is available
+sudo apt search neovim
+sudo apt install neovim
+```
+
 ### Vim Plugins
 
 Vim Plugins will automatically install themselves when you start Vim for the first time.
@@ -130,9 +150,6 @@ Add as many directories as you like.
 ### Fonts
 
 I'm using DejaVuSansMono as font. You can download it [here](http://dejavu-fonts.org/wiki/Download).
-
-Programmers can be very anal about fonts, so if you don't like it, feel free to use something
-different.
 
 My DejaVuSansMono, including the [powerline](https://github.com/Lokaltog/vim-powerline)
 patch is included for convenience.
