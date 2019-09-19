@@ -19,15 +19,27 @@ Only use this if you know what you are doing.
 
 ### Prerequisites
 
+#### Mac OS X
 * Xcode (download from App store)
 * [iTerm2](http://www.iterm2.com/)
 * [Homebrew](http://mxcl.github.io/homebrew/)
+
+#### Ubuntu
+Ubuntu should pretty much be ready to go. Just make sure you have a decent Terminal app installed. I prefer one where I can have Split Panes
 
 ### Homebrew
 
 Here's what I install on a clean OSX:
 
     brew install ack wget zsh readline
+    
+### Ubuntu Apt-get
+
+```bash
+sudo apt upgrade
+sudo apt install ack wget zsh
+sudo apt install libreadline7 libreadline-dev
+```
 
 ### dotfiles
 
