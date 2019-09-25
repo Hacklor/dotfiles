@@ -29,13 +29,17 @@ It requires a restart / logout-login in order to work
 
 ### Prerequisites
 
+#### All systems
+* [ASDF](https://asdf-vm.com/)
+
 #### Mac OS X
 * Xcode (download from App store)
 * [iTerm2](http://www.iterm2.com/)
 * [Homebrew](http://mxcl.github.io/homebrew/)
 
 #### Ubuntu
-Ubuntu should pretty much be ready to go. Just make sure you have a decent Terminal app installed. I prefer one where I can have Split Panes
+Ubuntu should pretty much be ready to go. Just make sure you have a decent Terminal app installed. I prefer one where I can have Split Panes.
+I recomment [Tilix](https://gnunn1.github.io/tilix-web/)
 
 ### Homebrew
 
@@ -46,6 +50,8 @@ brew install ack wget zsh readline
 ```
 
 ### Ubuntu Apt-get
+
+Here's what I install on a clean OSX:
 
 ```bash
 sudo apt upgrade
