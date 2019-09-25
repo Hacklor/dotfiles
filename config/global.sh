@@ -34,11 +34,15 @@ export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
+# Use nvim instead of vim, even when I accidently type vim
+alias vim='nvim'
+
 # Load Yarn
 export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"
 
-# Use nvim instead of vim, even when I accidently type vim
-alias vim='nvim'
+# Load ASDF
+. $HOME/.asdf/asdf.sh
+. $HOME/.asdf/completions/asdf.bash
 
 # Link to personal wiki
 alias wiki='nvim ~/Dropbox/Wiki/'
