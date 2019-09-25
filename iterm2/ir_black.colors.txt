@@ -1,0 +1,20 @@
+Foreground: #f8f5ed
+Background: #000000
+Bold: #ffffff
+Links: #005cbb
+Selection: #454c95
+Selected Text: #ffffff
+Badge: #ff2600 (255,38,0,128, RGBa)
+
+ANSI Colors
+          Normal        Bright
+Black     #000000       #686868
+Red       #ff8373       #ff6e67
+Green     #a8d4a9       #d6fcb9
+Yellow    #fffdc3       #fffed5
+Blue      #78aad6       #c1e3fe
+Magenta   #ff90fe       #ffb2fe
+Cyan      #d1d1fe       #e5e6fe
+White     #f8f5ed       #f1f1f1
+
+
