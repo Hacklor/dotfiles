@@ -25,6 +25,9 @@ defaults write -g KeyRepeat -int 1 # normal minimum is 2 (30 ms)
 
 It requires a restart / logout-login in order to work
 
+In Ubuntu there is a Key Repeat item in the Accessibility menu. Move the speed slider to the left in
+order to increase the key repeat.
+
 ## Installation
 
 ### Prerequisites
