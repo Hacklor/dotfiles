@@ -28,6 +28,13 @@ It requires a restart / logout-login in order to work
 In Ubuntu there is a Key Repeat item in the Accessibility menu. Move the speed slider to the left in
 order to increase the key repeat.
 
+## Ubuntu Remapping keys
+
+I like to set the Caps Lock to Ctrl in Mac OS X. But in Ubuntu it's a little bit harder to achieve.
+
+Go to `Ubuntu Software` and search for `Gnome Tweak` and install. Open the tool and go to Keyboard
+& Mouse > Keyboard > Additional Layout Options > Caps Lock behavior. Change this to Control.
+
 ## Installation
 
 ### Prerequisites
