@@ -91,6 +91,7 @@ alias gs='git stash'
 alias gsp='git stash pop'
 alias gf='git fetch'
 alias grp='git remote prune'
+alias gh='open $(github-url)'
 
 # Mvn
 alias mci='mvn clean install'
