@@ -29,6 +29,12 @@ export PATH=$PATH:$HOME/.dotfiles/bin
 export PATH="/usr/local/share/npm/bin:$PATH"
 # export NODE_PATH="/usr/local/lib/node_modules"
 
+# Tilix VTE Issue fix
+# https://gnunn1.github.io/tilix-web/manual/vteconfig/
+if [ $TILIX_ID ] || [ $VTE_VERSION ]; then
+        source /etc/profile.d/vte.sh
+fi
+
 # Load Nvm
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
