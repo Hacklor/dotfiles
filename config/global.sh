@@ -40,9 +40,6 @@ export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
-# Use nvim instead of vim, even when I accidently type vim
-alias vim='nvim'
-
 # Load Yarn
 export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"
 
@@ -50,8 +47,11 @@ export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"
 . $HOME/.asdf/asdf.sh
 . $HOME/.asdf/completions/asdf.bash
 
+# Use nvim instead of vim, even when I accidently type vim
+alias vim='nvim'
+
 # Link to personal wiki
-alias wiki='nvim ~/Dropbox/Wiki/'
+alias wiki='vim ~/Dropbox/Wiki/'
 
 # General aliases
 alias fucking='sudo'
@@ -62,7 +62,7 @@ alias reload='source ~/.dotfiles/config/global.sh'
 # Moving to directories
 alias p='cd ~/Projects'
 alias projects='cd ~/Projects'
-alias dot='nvim ~/.dotfiles'
+alias dot='vim ~/.dotfiles'
 alias dotfiles='cd ~/.dotfiles'
 
 # Ruby
@@ -104,9 +104,6 @@ alias mci='mvn clean install'
 
 # GoLang
 alias got='export GOPATH=`pwd`;export GO_CONFIG=$GOPATH/config/test.conf; go test'
-
-# Gulp
-alias gw='gulp watch'
 
 # Yarn
 alias yb='yarn build'
