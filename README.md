@@ -56,7 +56,7 @@ I recomment [Tilix](https://gnunn1.github.io/tilix-web/)
 Here's what I install on a clean OSX:
 
 ```bash
-brew install ack wget zsh readline
+brew install ack wget zsh readline gnugp
 ```
 
 ### Ubuntu Apt-get
