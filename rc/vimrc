@@ -151,7 +151,7 @@ let ruby_operators = 1    " Highlight Ruby operators
 
 " Hide DS_store, .git and current and previous directory indicators
 " Use - to go up one dir
-" let g:netrw_list_hide= "\.DS_Store,\.git/,^\\\./,^\\\.\\\./"
+let g:netrw_list_hide= "\.DS_Store,\.git/,^\\\./,^\\\.\\\./"
 let g:netrw_banner     = 0
 let g:netrw_localrmdir='rm -r'
 let g:netrw_bufsettings = 'noma nomod nu nobl nowrap ro'
