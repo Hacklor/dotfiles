@@ -47,6 +47,8 @@ export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"
 . $HOME/.asdf/asdf.sh
 . $HOME/.asdf/completions/asdf.bash
 
+export PATH="$HOME/.asdf/shims:$PATH"
+
 # Use nvim instead of vim, even when I accidently type vim
 alias vim='nvim'
 
@@ -98,6 +100,7 @@ alias gsp='git stash pop'
 alias gf='git fetch'
 alias grp='git remote prune'
 alias gh='open $(github-url)'
+alias ghpr='open $(github-url)/pulls'
 
 # Mvn
 alias mci='mvn clean install'

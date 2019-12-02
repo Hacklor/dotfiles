@@ -24,7 +24,7 @@ Bundle 'gmarik/vundle'
 Bundle 'Syntastic'
 Bundle 'tpope/vim-fugitive'
 Bundle 'kien/ctrlp.vim'
-Bundle 'mileszs/ack.vim'
+" Bundle 'mileszs/ack.vim'
 
 " Colorschemes
 Bundle 'wgibbs/vim-irblack'
@@ -33,43 +33,43 @@ Bundle 'vim-scripts/tir_black'
 " Syntax & Language Support
 Bundle 'othree/html5-syntax.vim'
 Bundle 'hail2u/vim-css3-syntax'
-Bundle 'kchmck/vim-coffee-script'
+" Bundle 'kchmck/vim-coffee-script'
 
 " Ruby / Rails
 Bundle 'vim-ruby/vim-ruby'
 Bundle 'tpope/vim-rails'
-Bundle 'tpope/vim-cucumber'
-Bundle 'tpope/vim-haml'
-Bundle 'slim-template/vim-slim'
-" Bundle 'thoughtbot/vim-rspec'
+" Bundle 'tpope/vim-cucumber'
+" Bundle 'tpope/vim-haml'
+" Bundle 'slim-template/vim-slim'
+Bundle 'thoughtbot/vim-rspec'
 
 " Elixir
-Bundle 'elixir-lang/vim-elixir'
+" Bundle 'elixir-lang/vim-elixir'
 
 " Haskell
-Bundle "neovimhaskell/haskell-vim"
+" Bundle 'neovimhaskell/haskell-vim'
 
 " Javascript
-" Bundle 'isRuslan/vim-es6'
-" Bundle 'vim-javascript'
+Bundle 'isRuslan/vim-es6'
+Bundle 'vim-javascript'
 Bundle 'mxw/vim-jsx'
 Bundle 'othree/yajs.vim'
 Bundle 'othree/javascript-libraries-syntax.vim'
 Bundle 'othree/es.next.syntax.vim'
 
 " Other syntax
-" Bundle 'tpope/vim-markdown'
-
+Bundle 'tpope/vim-markdown'
+" 
 " Other
 Bundle 'csexton/trailertrash.vim'
-" Bundle 'edsono/vim-matchit'
-" Bundle 'godlygeek/tabular'
-" Bundle 'tomtom/tcomment_vim'
-" Bundle 'tpope/vim-bundler'
-" Bundle 'tpope/vim-sensible'
+Bundle 'edsono/vim-matchit'
+Bundle 'godlygeek/tabular'
+Bundle 'tomtom/tcomment_vim'
+Bundle 'tpope/vim-bundler'
+Bundle 'tpope/vim-sensible'
 Bundle 'tpope/vim-surround'
-" Bundle 'SirVer/ultisnips'
-"
+Bundle 'SirVer/ultisnips'
+
 Bundle 'Lokaltog/vim-powerline'
 
 if needsToInstallBundles == 1
@@ -150,8 +150,8 @@ let ruby_no_expensive = 1 " Differentiate between do..end and class..end is slow
 let ruby_operators = 1    " Highlight Ruby operators
 
 " Hide DS_store, .git and current and previous directory indicators
-" " Use - to go up one dir
-let g:netrw_list_hide= "\.DS_Store,\.git/,^\\\./,^\\\.\\\./"
+" Use - to go up one dir
+" let g:netrw_list_hide= "\.DS_Store,\.git/,^\\\./,^\\\.\\\./"
 let g:netrw_banner     = 0
 let g:netrw_localrmdir='rm -r'
 let g:netrw_bufsettings = 'noma nomod nu nobl nowrap ro'
@@ -250,8 +250,7 @@ map <leader>m :vsplit %%
 map <leader>n :split %%
 
 " Map ,j to format json
-map <Leader>j :%!python -m json.tool<cr>
-
+map <Leader>j :%!python -m json.tool<cr> 
 let g:rspec_command_launcher = "iterm"
 let g:rspec_command_executable = "run_test {spec}"
 

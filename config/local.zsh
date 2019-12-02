@@ -30,6 +30,10 @@ HISTFILE=~/.histfile
 HISTSIZE=10000
 SAVEHIST=10000
 
+# The history is shared over multiple tabs in newer versions of iTerm / Zsh. Prevent this from happening
+unsetopt inc_append_history
+unsetopt share_history
+
 # be like emacs (and bash)
 bindkey -e
 
