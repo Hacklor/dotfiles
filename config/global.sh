@@ -2,8 +2,8 @@ export LC_CTYPE=en_US.UTF-8
 export LC_ALL=en_US.UTF-8
 
 # Setting the editor of choice
-export EDITOR='nvim'
-export GIT_EDITOR='nvim'
+export EDITOR='vim'
+export GIT_EDITOR='vim'
 export VISUAL=$EDITOR
 export SVN_EDITOR=$EDITOR
 export BUNDLER_EDITOR=$EDITOR
@@ -50,10 +50,10 @@ export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"
 export PATH="$HOME/.asdf/shims:$PATH"
 
 # Use nvim instead of vim, even when I accidently type vim
-alias vim='nvim'
+# alias vim='nvim'
 
 # Link to personal wiki
-alias wiki='vim ~/Dropbox/Wiki/'
+alias wiki='vim ~/Dropbox/Shared/Wiki/'
 
 # General aliases
 alias fucking='sudo'
@@ -117,6 +117,11 @@ alias ytw='yarn test --watch'
 
 alias yl='yarn lint'
 alias ysf='yarn standard --fix'
+
+# NPM
+alias ntu='npm run test:unit'
+alias nte='npm run test:e2e'
+alias ni='npm install'
 
 # Automatically add all ssh keys to ssh agent
 function sshkeys() {

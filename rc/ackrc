@@ -5,10 +5,11 @@
 --follow
 
 # Some basic ignores.
+--ignore-dir=coverage
+--ignore-dir=dist
+--ignore-dir=es
 --ignore-dir=log
 --ignore-dir=tmp
---ignore-dir=coverage
---ignore-dir=es
 
 # Some files not usually covered by ack.
 --type-set=haml=.haml
