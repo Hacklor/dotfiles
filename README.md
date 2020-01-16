@@ -170,9 +170,6 @@ I'm using DejaVuSansMono as font. You can download it [here](http://dejavu-fonts
 My DejaVuSansMono, including the [powerline](https://github.com/Lokaltog/vim-powerline)
 patch is included for convenience.
 
-## Development Tools
-[Running IE on Mac using VirtualBox](https://github.com/xdissent/ievms)
-
 ## Credits
 
 Thanks everybody who puts their dotfiles online. I copied a lot from
