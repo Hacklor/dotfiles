@@ -51,6 +51,13 @@ Go to `Ubuntu Software` and search for `Gnome Tweak` and install. Open the tool 
 Ubuntu should pretty much be ready to go. Just make sure you have a decent Terminal app installed. I prefer one where I can have Split Panes.
 I recomment [Tilix](https://gnunn1.github.io/tilix-web/)
 
+If you start up Tilix and see a warning about VTE, you can find the solution [here](https://gnunn1.github.io/tilix-web/manual/vteconfig/)
+To use Zsh as the default terminal run the following command after installing Zsh
+
+```bash
+sudo usermod --shell $(which zsh) <your_username>
+```
+
 ### Homebrew
 
 Here's what I install on a clean OSX:
