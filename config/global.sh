@@ -61,6 +61,10 @@ alias la='ls -alh'
 alias grep='grep --colour=always'
 alias reload='source ~/.dotfiles/config/global.sh'
 
+# TheFuck alias
+eval $(thefuck --alias)
+alias kut=fuck
+
 # Moving to directories
 alias p='cd ~/Projects'
 alias projects='cd ~/Projects'
