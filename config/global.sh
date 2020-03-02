@@ -122,6 +122,7 @@ alias ysf='yarn standard --fix'
 
 # NPM
 alias ntu='npm run test:unit'
+alias nte='npm run test:e2e'
 alias ni='npm install'
 
 # Automatically add all ssh keys to ssh agent
