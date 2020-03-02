@@ -63,10 +63,6 @@ alias reload='source ~/.dotfiles/config/global.sh'
 eval $(thefuck --alias) # Creates 'fuck' command, depends on thefuck
 alias kut=fuck
 
-# TheFuck alias
-eval $(thefuck --alias)
-alias kut=fuck
-
 # Moving to directories
 alias p='cd ~/Projects'
 alias projects='cd ~/Projects'
