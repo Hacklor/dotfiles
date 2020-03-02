@@ -60,6 +60,8 @@ alias fucking='sudo'
 alias la='ls -alh'
 alias grep='grep --colour=always'
 alias reload='source ~/.dotfiles/config/global.sh'
+eval $(thefuck --alias) # Creates 'fuck' command, depends on thefuck
+alias kut=fuck
 
 # TheFuck alias
 eval $(thefuck --alias)
@@ -124,7 +126,6 @@ alias ysf='yarn standard --fix'
 
 # NPM
 alias ntu='npm run test:unit'
-alias nte='npm run test:e2e'
 alias ni='npm install'
 
 # Automatically add all ssh keys to ssh agent
