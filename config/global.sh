@@ -60,9 +60,7 @@ alias fucking='sudo'
 alias la='ls -alh'
 alias grep='grep --colour=always'
 alias reload='source ~/.dotfiles/config/global.sh'
-
-# TheFuck alias
-eval $(thefuck --alias)
+eval $(thefuck --alias) # Creates 'fuck' command, depends on thefuck
 alias kut=fuck
 
 # Moving to directories

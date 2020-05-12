@@ -302,9 +302,11 @@ map <Leader><Leader>f :Git fetch<cr>
 map <Leader><Leader>u :Git up<cr>
 
 " Open notes file
-map <Leader>1 :split ~/Dropbox/notes1.md<cr>
-map <Leader>2 :split ~/Dropbox/notes2.md<cr>
-map <Leader>3 :split ~/Dropbox/notes3.md<cr>
+map <Leader>1 :split ~/Dropbox/Shared/notes1.md<cr>
+map <Leader>2 :split ~/Dropbox/Shared/notes2.md<cr>
+map <Leader>3 :split ~/Dropbox/Shared/notes3.md<cr>
+map <Leader>4 :split ~/Dropbox/Shared/notes4.md<cr>
+map <Leader>5 :split ~/Dropbox/Shared/notes5.md<cr>
 
 " Moving lines up and down in normal, insert and visual mode
 " Alt+j to move down, Alt+k to move up
