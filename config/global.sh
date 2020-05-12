@@ -2,8 +2,8 @@ export LC_CTYPE=en_US.UTF-8
 export LC_ALL=en_US.UTF-8
 
 # Setting the editor of choice
-export EDITOR='vim'
-export GIT_EDITOR='vim'
+export EDITOR='nvim'
+export GIT_EDITOR='nvim'
 export VISUAL=$EDITOR
 export SVN_EDITOR=$EDITOR
 export BUNDLER_EDITOR=$EDITOR
@@ -45,12 +45,12 @@ export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"
 
 # Load ASDF
 . $HOME/.asdf/asdf.sh
-. $HOME/.asdf/completions/asdf.bash
+# . $HOME/.asdf/completions/asdf.bash
 
 export PATH="$HOME/.asdf/shims:$PATH"
 
 # Use nvim instead of vim, even when I accidently type vim
-# alias vim='nvim'
+alias vim='nvim'
 
 # Link to personal wiki
 alias wiki='vim ~/Dropbox/Shared/Wiki/'
