@@ -52,7 +52,16 @@ export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"
 . $HOME/.asdf/asdf.sh
 # . $HOME/.asdf/completions/asdf.bash
 
+# ASDF completions
+# append completions to fpath
+fpath=(${ASDF_DIR}/completions $fpath)
+
+# initialise completions with ZSH's compinit
+autoload -Uz compinit
+compinit
+
 export PATH="$HOME/.asdf/shims:$PATH"
+
 
 # Use nvim instead of vim, even when I accidently type vim
 alias vim='nvim'
