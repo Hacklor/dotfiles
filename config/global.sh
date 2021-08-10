@@ -32,7 +32,7 @@ export PATH="/usr/local/share/npm/bin:$PATH"
 export PATH="$PATH:/usr/lib/dart/bin"
 
 # Add Flutter (Dart)
-export PATH="$PATH:~/sdk/flutter/bin"
+export PATH="$PATH:$HOME/sdk/flutter/bin"
 
 # Tilix VTE Issue fix
 # https://gnunn1.github.io/tilix-web/manual/vteconfig/
