@@ -148,7 +148,7 @@ function basedir {
   else
     dir=$PWD
   fi
-  append $(basename $dir)
+  append $(basename "$dir")
 }
 
 function merge {

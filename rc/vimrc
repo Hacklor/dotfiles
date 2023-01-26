@@ -24,6 +24,7 @@ Bundle 'gmarik/vundle'
 Bundle 'Syntastic'
 Bundle 'tpope/vim-fugitive'
 Bundle 'kien/ctrlp.vim'
+Bundle 'neoclide/coc.nvim', { 'branch': 'release' }
 " Bundle 'mileszs/ack.vim'
 
 " Colorschemes
@@ -51,24 +52,30 @@ Bundle 'thoughtbot/vim-rspec'
 
 " Javascript
 Bundle 'isRuslan/vim-es6'
-Bundle 'vim-javascript'
+Bundle 'pangloss/vim-javascript'
 Bundle 'mxw/vim-jsx'
-Bundle 'othree/yajs.vim'
-Bundle 'othree/javascript-libraries-syntax.vim'
-Bundle 'othree/es.next.syntax.vim'
+Bundle 'maxmellon/vim-jsx-pretty'
+Bundle 'curist/vim-angular-template'
+" Bundle 'othree/yajs.vim'
+" Bundle 'othree/javascript-libraries-syntax.vim'
+" Bundle 'othree/es.next.syntax.vim'
+
+" Pug Templating Enging
+Bundle 'digitaltoad/vim-pug'
+Bundle 'iloginow/vim-stylus'
 
 " Other syntax
 Bundle 'tpope/vim-markdown'
-" 
+
 " Other
 Bundle 'csexton/trailertrash.vim'
-Bundle 'edsono/vim-matchit'
+" Bundle 'edsono/vim-matchit'
 Bundle 'godlygeek/tabular'
 Bundle 'tomtom/tcomment_vim'
 Bundle 'tpope/vim-bundler'
 Bundle 'tpope/vim-sensible'
 Bundle 'tpope/vim-surround'
-Bundle 'SirVer/ultisnips'
+" Bundle 'SirVer/ultisnips'
 
 Bundle 'Lokaltog/vim-powerline'
 
@@ -120,7 +127,7 @@ set undofile               " Keep undo history even after closing Vim
 set undodir=~/.vim/undo    " Where to store undo history
 set timeoutlen=500         " Don't wait so long for ambiguous leader keys
 set gdefault               " assume the /g flag on :s substitutions to replace all matches in a line
-set textwidth=100          " Set textwidth
+set textwidth=120          " Set textwidth
 set colorcolumn=+1         " Set the column after the textwidth as colored
 set autoread               " Automatically reload files changed outside of vim
 
@@ -250,7 +257,7 @@ map <leader>m :vsplit %%
 map <leader>n :split %%
 
 " Map ,j to format json
-map <Leader>j :%!python -m json.tool<cr> 
+map <Leader>j :%!python -m json.tool<cr>
 let g:rspec_command_launcher = "iterm"
 let g:rspec_command_executable = "run_test {spec}"
 
@@ -321,6 +328,42 @@ vnoremap ˚ :m '<-2<CR>gv=gv
 let g:ctrlp_working_path_mode = 'd'
 let g:ctrlp_custom_ignore = '\v[\/](node_modules|target|dist|tmp|es|lib)|(\.(swp|ico|git|svn|DS_Store))$'
 " let g:ctrlp_custom_ignore = 'node_modules\|DS_Store\|git|tmp|es6|lib'
+
+
+" Configuration for Coc Auto Completion
+let g:coc_global_extensions = [ 'coc-html', 'coc-css', 'coc-tsserver', 'coc-json' ]
+
+" Add `:Format` command to format current buffer.
+command! -nargs=0 Format :call CocAction('format')
+
+" Add `:Fold` command to fold current buffer.
+command! -nargs=? Fold :call     CocAction('fold', <f-args>)
+
+" Add `:OR` command for organize imports of the current buffer.
+command! -nargs=0 OR   :call     CocAction('runCommand', 'editor.action.organizeImport')
+
+" Symbol renaming.
+nmap <leader>rn <Plug>(coc-rename)
+
+" Formatting selected code.
+xmap <leader>f  <Plug>(coc-format-selected)
+nmap <leader>f  <Plug>(coc-format-selected)
+
+" Remap keys for applying codeAction to the current line.
+nmap <leader>ac  <Plug>(coc-codeaction)
+" Apply AutoFix to problem on the current line.
+nmap <leader>qf  <Plug>(coc-fix-current)
+
+" Use `[g` and `]g` to navigate diagnostics
+" Use `:CocDiagnostics` to get all diagnostics of current buffer in location list.
+nmap <silent> [g <Plug>(coc-diagnostic-prev)
+nmap <silent> ]g <Plug>(coc-diagnostic-next)
+
+" GoTo code navigation.
+nmap <leader>gd <Plug>(coc-definition)
+nmap <leader>gy <Plug>(coc-type-definition)
+nmap <leader>gi <Plug>(coc-implementation)
+nmap <leader>gr <Plug>(coc-references)
 
 " ==========================
 " FUNCTIONS

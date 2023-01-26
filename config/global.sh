@@ -18,6 +18,7 @@ export RUBY_HEAP_SLOTS_GROWTH_FACTOR=1
 
 # Paths
 export PATH="/usr/local/bin:/opt/local/bin:$PATH"
+export PATH="$PATH:$HOME.local/bin"
 if [[ -d "$HOME/.rvm/bin" ]]; then
   export PATH=$PATH:$HOME/.rvm/bin
 fi
@@ -25,6 +26,7 @@ if [[ -d "/usr/local/sbin" ]]; then
   export PATH=$PATH:/usr/local/sbin
 fi
 export PATH=$PATH:$HOME/.dotfiles/bin
+
 # Load Node.js bin:
 export PATH="/usr/local/share/npm/bin:$PATH"
 
